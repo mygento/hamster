@@ -1,0 +1,16 @@
+{
+    "minimum-stability": "dev",
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*",
+        "ecomdev/ecomdev_phpunit": "*"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "http://mygento.github.io/packages"
+        }
+    ],
+    "extra": {
+        "magento-root-dir": "public"
+    }
+}
