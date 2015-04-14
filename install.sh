@@ -1,9 +1,11 @@
 #!/bin/bash
-MAGENTO_VERSION="1.9.0.1"
-MAGENTO_DB_USER="root"
-MAGENTO_DB_HOST="localhost"
-MAGENTO_DB_NAME="magento"
-MAGENTO_DB_PASS=""
+
+if [ -z $MAGENTO_DB_HOST ]; then MAGENTO_DB_HOST="localhost"; fi
+if [ -z $MAGENTO_DB_PORT ]; then MAGENTO_DB_PORT="3306"; fi
+if [ -z $MAGENTO_DB_USER ]; then MAGENTO_DB_USER="root"; fi
+if [ -z $MAGENTO_DB_PASS ]; then MAGENTO_DB_PASS=""; fi
+if [ -z $MAGENTO_DB_NAME ]; then MAGENTO_DB_NAME="magento"; fi
+if [ -z $MAGENTO_DB_ALLOWSAME ]; then MAGENTO_DB_ALLOWSAME="0"; fi
 
 # Get absolute path to main directory
 ABSPATH=$(cd "${0%/*}" 2>/dev/null; echo "${PWD}/${0##*/}")
