@@ -46,4 +46,4 @@ php resources/n98-magerun.phar install \
 echo "installing composer"
 composer self-update
 composer install
-resources/n98-magerun.phar --root-dir=public config:set dev/template/allow_symlink 1
+php resources/n98-magerun.phar --root-dir=public config:set dev/template/allow_symlink 1
