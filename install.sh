@@ -38,7 +38,7 @@ sed -i -e s/MAGENTO_DB_NAME/${MAGENTO_DB_NAME}_test/g ./resources/local.xml.phpu
 echo "installing magento"
 php resources/n98-magerun.phar install \
       --dbHost="${MAGENTO_DB_HOST}" --dbUser="${MAGENTO_DB_USER}" --dbPass="${MAGENTO_DB_PASS}" --dbName="${MAGENTO_DB_NAME}" \
-      --installSampleData=yes \
+      --installSampleData=no \
       --useDefaultConfigParams=yes \
       --magentoVersionByName="${MAGENTO_VERSION}" \
       --installationFolder="${SOURCE_DIR}/public" \
