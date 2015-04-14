@@ -26,14 +26,14 @@ echo
 echo
 cd ${SOURCE_DIR}
 echo "recreating DB"
-#mysql -u${MAGENTO_DB_USER} ${MYSQLPASS} -h${MAGENTO_DB_HOST} -e "DROP DATABASE IF EXISTS ${MAGENTO_DB_NAME}; CREATE DATABASE ${MAGENTO_DB_NAME};"
+mysql -u${MAGENTO_DB_USER} ${MYSQLPASS} -h${MAGENTO_DB_HOST} -e "DROP DATABASE IF EXISTS ${MAGENTO_DB_NAME}; CREATE DATABASE ${MAGENTO_DB_NAME};"
 sed -i -e s/MAGENTO_DB_HOST/${MAGENTO_DB_HOST}/g ./resources/local.xml.phpunit
 sed -i -e s/MAGENTO_DB_PORT/${MAGENTO_DB_PORT}/g ./resources/local.xml.phpunit
 sed -i -e s/MAGENTO_DB_USER/${MAGENTO_DB_USER}/g ./resources/local.xml.phpunit
 sed -i -e s/MAGENTO_DB_PASS/${MAGENTO_DB_PASS}/g ./resources/local.xml.phpunit
 
 echo "recreating test DB"
-#mysql -u${MAGENTO_DB_USER} ${MYSQLPASS} -h${MAGENTO_DB_HOST} -e "DROP DATABASE IF EXISTS ${MAGENTO_DB_NAME}_test; CREATE DATABASE ${MAGENTO_DB_NAME}_test;"
+mysql -u${MAGENTO_DB_USER} ${MYSQLPASS} -h${MAGENTO_DB_HOST} -e "DROP DATABASE IF EXISTS ${MAGENTO_DB_NAME}_test; CREATE DATABASE ${MAGENTO_DB_NAME}_test;"
 sed -i -e s/MAGENTO_DB_NAME/${MAGENTO_DB_NAME}_test/g ./resources/local.xml.phpunit
 echo "installing magento"
 php resources/n98-magerun.phar install \
