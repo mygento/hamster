@@ -45,5 +45,5 @@ composer self-update
 composer install --no-interaction
 cd vendor/ecomdev/ecomdev_phpunit
 git submodule update --init
-cd "${ABSPATH}"
+cd "${SOURCE_DIR}"
 php resources/n98-magerun.phar --root-dir=public config:set dev/template/allow_symlink 1
