@@ -34,6 +34,7 @@ sed -i -e s/MAGENTO_DB_PASS/${MAGENTO_DB_PASS}/g ./resources/local.xml.phpunit
 sed -i -e s/MAGENTO_DB_NAME/${MAGENTO_DB_NAME}/g ./resources/local.xml.phpunit
 sed -i -e s/MAGENTO_DB_ALLOWSAME/${MAGENTO_DB_ALLOWSAME}/g ./resources/local.xml.phpunit
 echo "installing magento"
+php resources/n98-magerun.phar self-update
 php resources/n98-magerun.phar install \
       --dbHost="${MAGENTO_DB_HOST}" --dbUser="${MAGENTO_DB_USER}" --dbPass="${MAGENTO_DB_PASS}" --dbName="${MAGENTO_DB_NAME}" \
       --installSampleData=no \
