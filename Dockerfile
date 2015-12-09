@@ -23,5 +23,6 @@ RUN phpenv versions
 
 RUN pwd
 RUN printenv
+RUN touch /mygento.txt
 
 #CMD ["/bin/bash", "/start.sh"]
