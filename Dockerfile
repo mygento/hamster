@@ -2,7 +2,7 @@ FROM mygento/phpenv:latest
 
 MAINTAINER Nikita Tarasov <nikita@mygento.ru>
 
-RUN apt-get install wget unzip -y && mkdir -p /opt/magento
+RUN mkdir -p /opt/magento
 
 RUN wget --no-check-certificate -O /opt/magento/1.9.2.2.zip https://github.com/bragento/magento-core/archive/1.9.2.2-patch1.zip && \
 	unzip -q /opt/magento/1.9.2.2.zip -d /opt/magento/1.9.2.2 && \
