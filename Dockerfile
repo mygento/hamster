@@ -6,7 +6,7 @@ RUN mkdir -p /opt/magento
 
 RUN wget --no-check-certificate -O /opt/magento/1.9.2.3.zip https://github.com/bragento/magento-core/archive/1.9.2.3.zip && \
 	unzip -q /opt/magento/1.9.2.3.zip -d /opt/magento/1.9.2.3 && \
-	mv /opt/magento/1.9.2.3/magento-core-1.9.2.3/* /opt/magento/1.9.2.2/magento-core-1.9.2.3/.htaccess /opt/magento/1.9.2.3/ && \
+	mv /opt/magento/1.9.2.3/magento-core-1.9.2.3/* /opt/magento/1.9.2.3/magento-core-1.9.2.3/.htaccess /opt/magento/1.9.2.3/ && \
 	rm /opt/magento/1.9.2.3.zip && \
 	rm -fR /opt/magento/1.9.2.3/magento-core-1.9.2.3
 
