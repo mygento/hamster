@@ -4,11 +4,11 @@ MAINTAINER Nikita Tarasov <nikita@mygento.ru>
 
 RUN mkdir -p /opt/magento
 
-RUN wget --no-check-certificate -O /opt/magento/1.9.2.2.zip https://github.com/bragento/magento-core/archive/1.9.2.2-patch1.zip && \
-	unzip -q /opt/magento/1.9.2.2.zip -d /opt/magento/1.9.2.2 && \
-	mv /opt/magento/1.9.2.2/magento-core-1.9.2.2-patch1/* /opt/magento/1.9.2.2/magento-core-1.9.2.2-patch1/.htaccess /opt/magento/1.9.2.2/ && \
-	rm /opt/magento/1.9.2.2.zip && \
-	rm -fR /opt/magento/1.9.2.2/magento-core-1.9.2.2-patch1
+RUN wget --no-check-certificate -O /opt/magento/1.9.2.3.zip https://github.com/bragento/magento-core/archive/1.9.2.3.zip && \
+	unzip -q /opt/magento/1.9.2.3.zip -d /opt/magento/1.9.2.3 && \
+	mv /opt/magento/1.9.2.3/magento-core-1.9.2.3/* /opt/magento/1.9.2.2/magento-core-1.9.2.3/.htaccess /opt/magento/1.9.2.3/ && \
+	rm /opt/magento/1.9.2.3.zip && \
+	rm -fR /opt/magento/1.9.2.3/magento-core-1.9.2.3
 
 RUN wget --no-check-certificate -O /opt/magento/1.8.1.0.zip https://github.com/bragento/magento-core/archive/1.8.1.0-patch2.zip && \
         unzip -q /opt/magento/1.8.1.0.zip -d /opt/magento/1.8.1.0 && \
