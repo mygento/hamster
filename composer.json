@@ -7,7 +7,7 @@
     "repositories": [
         {
             "type": "composer",
-            "url": "http://mygento.github.io/packages"
+            "url": "https://mygento.github.io/packages"
         }
     ],
     "extra": {
