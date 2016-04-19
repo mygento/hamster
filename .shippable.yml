@@ -9,7 +9,7 @@ build:
   pre_ci:
     - sed -i -e s/{PHP_VERSION}/$PHP_VERSION/g Dockerfile
     - sed -i -e s/{MAGE_VERSION}/$MAGE_VERSION/g Dockerfile
-    - docker build --rm=true --pull=true --force-rm=true --no-cache=true --tag=mygento/php:$MAGE_PHP .
+    - docker build --rm=true --pull=true --force-rm=true --no-cache=true --tag=mygento/hamster:$MAGE_PHP .
   pre_ci_boot:
     image_name: mygento/hamster
     image_tag: $MAGE_PHP
