@@ -7,7 +7,7 @@ env:
     - MAGE_PHP='5.6-1.9' PHP_VERSION='5.6' MAGE_VERSION='1.9.2.4'
 build:
   pre_ci:
-    - sed -i -e s/PHP_VERSION/${PHP_VERSION}/g Dockerfile
+    - sed -i -e s/{PHP_VERSION}/$PHP_VERSION/g Dockerfile
     - docker build --rm=true --pull=true --force-rm=true --no-cache=true --tag=mygento/php:$MAGE_PHP .
   pre_ci_boot:
     image_name: mygento/hamster
