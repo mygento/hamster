@@ -18,7 +18,7 @@ build:
      - php -v
      - ls -la /opt/magento/
   post_ci:
-    - docker push mygento/php:$PHP_TAG
+    - docker push mygento/hamster:$PHP_TAG
 integrations:
     hub:
       - integrationName: Docker
