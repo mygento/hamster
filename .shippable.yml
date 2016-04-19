@@ -3,7 +3,7 @@ env:
     - MAGE_PHP='5.5-1.7' PHP_VERSION='5.5' MAGE_VERSION='1.7.0.2-patch10'
     - MAGE_PHP='5.5-1.8' PHP_VERSION='5.5' MAGE_VERSION='1.8.1.0-patch4'
     - MAGE_PHP='5.5-1.9' PHP_VERSION='5.5' MAGE_VERSION='1.9.2.4'
-    - MAGE_PHP='5.6_1.8' PHP_VERSION='5.6' MAGE_VERSION='1.8.1.0-patch4'
+    - MAGE_PHP='5.6-1.8' PHP_VERSION='5.6' MAGE_VERSION='1.8.1.0-patch4'
     - MAGE_PHP='5.6-1.9' PHP_VERSION='5.6' MAGE_VERSION='1.9.2.4'
 build:
   pre_ci:
@@ -15,7 +15,6 @@ build:
     image_tag: $MAGE_PHP
     pull: false
   ci:
-     - php -v
      - ls -la /opt/magento/
   post_ci:
     - docker push mygento/hamster:$PHP_TAG
